@@ -1,0 +1,7 @@
+.dropdown-title {
+  color: white !important; /* Rimuovi !important per testare */
+}
+
+.navbar .dropdown-title {
+  color: white !important; /* Maggiore specificità */
+}
