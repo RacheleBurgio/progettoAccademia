@@ -1,38 +1,29 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 import MyNav from './components/Navbar/Navbar'
 import HeroSection from './components/Herosection/Herosection'
-import Presentazione from './components/Collegamento/Collegamento'
-import Collegamento from './components/Collegamento/Collegamento'
+import Footer from './components/Footer/Footer'
+import ChiSiamo from './components/ChiSiamo/ChiSiamo'
+import INostriCorsi from './components/INostriCorsi/INostriCorsi'
+import AccademiaInVetrina from './components/AccademiaInVetrina/AccademiaInVetrina'
 
 function App() {
   return (
     <Router>
       <MyNav />
-      {/* Aggiungi HeroSection e Presentazione solo nella Home */}
-      <MainContent />
+      <Routes>
+        <Route path="/" element={<HeroSection />} />
+        <Route path="/chisiamo" element={<ChiSiamo />} />
+        <Route path="/nostricorsi" element={<INostriCorsi />} />
+        <Route
+          path="/accademiainvetrina"
+          element={<AccademiaInVetrina />}
+        ></Route>
+      </Routes>
+      <Footer />
     </Router>
-  )
-}
-
-// Separare il contenuto principale per gestire la logica della Home
-function MainContent() {
-  const location = useLocation() // Ottieni il percorso corrente
-
-  return (
-    <>
-      {/* Mostra HeroSection e Presentazione solo se il percorso è "/" o "/Home" */}
-      <>
-        <HeroSection />
-        <Collegamento />
-      </>
-    </>
   )
 }
 
