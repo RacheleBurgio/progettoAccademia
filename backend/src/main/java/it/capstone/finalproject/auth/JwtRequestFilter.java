@@ -1,6 +1,7 @@
 package it.capstone.finalproject.auth;
 
 import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.JwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,9 +12,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
-import org.springframework.util.AntPathMatcher;
 import org.springframework.web.filter.OncePerRequestFilter;
-
+import org.springframework.util.AntPathMatcher;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -33,6 +33,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                                     FilterChain chain) throws ServletException, IOException {
         final String requestTokenHeader = request.getHeader("Authorization");
 
+        if(shouldNotFilter(request)) {
+            chain.doFilter(request, response);
+            return;
+        }
         String username = null;
         String jwtToken = null;
 
@@ -47,9 +51,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 System.out.println("Il token JWT è scaduto");
             }
         } else {
-            // logger.warn("Il token JWT non inizia con Bearer");
-            chain.doFilter(request, response);
-            return;
+
+                request.setAttribute("javax.servlet.error.exception", new JwtTokenMissingException("JWT Token is missing"));
+                request.getRequestDispatcher("/error").forward(request, response);
+                return;
         }
 
         // Valida il token e configura l'autenticazione nel contesto di sicurezza
@@ -82,5 +87,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             "/error",
             "/sw.js"
     );
+
 
 }

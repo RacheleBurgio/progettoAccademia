@@ -1,6 +1,7 @@
 package it.capstone.finalproject.auth;
 
 
+import io.jsonwebtoken.JwtException;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolation;

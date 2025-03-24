@@ -7,7 +7,9 @@ import HeroSection from './components/Herosection/Herosection'
 import Footer from './components/Footer/Footer'
 import ChiSiamo from './components/ChiSiamo/ChiSiamo'
 import INostriCorsi from './components/INostriCorsi/INostriCorsi'
-import AccademiaInVetrina from './components/AccademiaInVetrina/AccademiaInVetrina'
+import SpettacoliEventi from './components/SpettacoliEventi/SpettacoliEventi'
+
+import Login from './components/login/login'
 
 function App() {
   return (
@@ -17,10 +19,8 @@ function App() {
         <Route path="/" element={<HeroSection />} />
         <Route path="/chisiamo" element={<ChiSiamo />} />
         <Route path="/nostricorsi" element={<INostriCorsi />} />
-        <Route
-          path="/accademiainvetrina"
-          element={<AccademiaInVetrina />}
-        ></Route>
+        <Route path="/spettacolieventi" element={<SpettacoliEventi />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </Router>

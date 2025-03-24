@@ -36,10 +36,6 @@ public class Studenti {
     @NotBlank
     private String sesso;
 
-    @NotBlank
-    private String annoDiCorso;
-
-
     private String video;
 
 }

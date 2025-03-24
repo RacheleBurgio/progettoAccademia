@@ -1,5 +1,4 @@
 import { Container, Row, Col } from 'react-bootstrap'
-import Collegamento from '../Collegamento/Collegamento'
 import styles from './Herosection.module.css'
 import Presentazione from '../Presentazione/Presentazione'
 import News from '../News/News'
@@ -75,7 +74,6 @@ function HeroSection() {
 
       {/* Sezioni aggiuntive */}
       <Presentazione />
-      <Collegamento />
       <News />
     </>
   )

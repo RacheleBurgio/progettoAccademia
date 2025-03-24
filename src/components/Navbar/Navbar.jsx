@@ -25,10 +25,7 @@ function MyNav() {
               <Dropdown.Item as={Link} to="/nostricorsi">
                 I nostri corsi
               </Dropdown.Item>
-              <Dropdown.Item as={Link} to="/accademiainvetrina">
-                Accademia in vetrina
-              </Dropdown.Item>
-              <Dropdown.Item as={Link} to="/spettacoli-ed-eventi">
+              <Dropdown.Item as={Link} to="/spettacolieventi">
                 Spettacoli ed eventi
               </Dropdown.Item>
             </Dropdown.Menu>
@@ -70,7 +67,12 @@ function MyNav() {
             Masterclass
           </Nav.Link>
 
-          <Button className={styles.bottone} variant="outline-info">
+          <Button
+            as={Link}
+            to="/login"
+            className={styles.bottone}
+            variant="outline-info"
+          >
             Area Riservata
           </Button>
         </Nav>
