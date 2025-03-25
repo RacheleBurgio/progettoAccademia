@@ -22,6 +22,20 @@ public class Studenti {
     private String nome;
 
     @NotBlank
-    private String imgprofilo;
+    private String cognome;
+
+    @NotBlank
+    private String altezza;
+
+    @NotBlank
+    private String età;
+
+    @NotBlank
+    private String dataDiNascita;
+
+    @NotBlank
+    private String sesso;
+
+    private String video;
 
 }

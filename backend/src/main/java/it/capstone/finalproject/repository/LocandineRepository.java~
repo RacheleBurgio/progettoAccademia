@@ -1,0 +1,4 @@
+package it.capstone.finalproject.locandine;
+
+public interface LocandineRepository {
+}

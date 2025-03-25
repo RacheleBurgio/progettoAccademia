@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 import ChiSiamo from './components/ChiSiamo/ChiSiamo'
 import INostriCorsi from './components/INostriCorsi/INostriCorsi'
 import SpettacoliEventi from './components/SpettacoliEventi/SpettacoliEventi'
+import Etichetta from './components/Etichetta/Etichetta'
 
 import Login from './components/login/login'
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/nostricorsi" element={<INostriCorsi />} />
         <Route path="/spettacolieventi" element={<SpettacoliEventi />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/etichetta" element={<Etichetta />} />
       </Routes>
       <Footer />
     </Router>

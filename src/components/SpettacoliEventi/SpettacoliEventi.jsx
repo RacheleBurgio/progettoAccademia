@@ -60,6 +60,70 @@ const SpettacoliEventi = () => {
           </Col>
         </Row>
       </Container>
+      <Container>
+        <Row className="d-flex justify-content-center">
+          <Col md={3}>
+            <img src="/bmLuglio2024.jpeg" alt="" className="img-fluid" />
+          </Col>
+          <Col md={3}>
+            <img src="/bldicembre2023.jpg" alt="" className="img-fluid" />
+          </Col>
+          <Col md={3}>
+            <img src="/biDicembre2023.jpeg" alt="" className="img-fluid" />
+          </Col>
+          <Col md={3}>
+            <img src="/bhLuglio2023.jpeg" alt="" className="img-fluid" />
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row className="d-flex justify-content-center">
+          <Col mo={3}>
+            <img src="" alt="" className="img-fluid" />
+          </Col>
+          <Col mo={3}>
+            <img src="" alt="" className="img-fluid" />
+          </Col>
+          <Col mo={3}>
+            <img src="" alt="" className="img-fluid" />
+          </Col>
+          <Col mo={3}>
+            <img src="" alt="" className="img-fluid" />
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row className="d-flex justify-content-center">
+          <Col md="auto">
+            <img src="bmLuglio2024.jpeg" alt="" className="img-fluid" />
+          </Col>
+          <Col md="auto">
+            <img src="" alt="" className="img-fluid" />
+          </Col>
+          <Col md="auto">
+            <img src="" alt="" className="img-fluid" />
+          </Col>
+          <Col md="auto">
+            <img src="" alt="" className="img-fluid" />
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row className="d-flex justify-content-center">
+          <Col md="auto">
+            <img src="bmLuglio2024.jpeg" alt="" className="img-fluid" />
+          </Col>
+          <Col md="auto">
+            <img src="" alt="" className="img-fluid" />
+          </Col>
+          <Col md="auto">
+            <img src="" alt="" className="img-fluid" />
+          </Col>
+          <Col md="auto">
+            <img src="" alt="" className="img-fluid" />
+          </Col>
+        </Row>
+      </Container>
     </div>
   )
 }

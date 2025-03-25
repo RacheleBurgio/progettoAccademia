@@ -36,7 +36,9 @@ function MyNav() {
               Production
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href="#studenti">Etichetta</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/etichetta">
+                Etichetta
+              </Dropdown.Item>
               <Dropdown.Item href="#testimonianze">
                 Artisti in Portafoglio
               </Dropdown.Item>
