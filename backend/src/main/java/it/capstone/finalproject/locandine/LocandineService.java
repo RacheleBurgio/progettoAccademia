@@ -4,18 +4,24 @@ import it.capstone.finalproject.entities.Locandine;
 import it.capstone.finalproject.repository.LocandineRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Optional;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class LocandineService {
     private final LocandineRepository locandineRepository;
-    public LocandineResponse getLocandine() {
-        Optional<Locandine> locandine = locandineRepository.findById(1L);
-        return new LocandineResponse(locandine.get().getImmagineurl());
+
+    public List<LocandineResponse> getAllLocandine() {
+        return locandineRepository.findAllByOrderByDataCreazioneDesc().stream()
+                .map(l -> new LocandineResponse(l.getId(), l.getImmagineurl(), l.getDataCreazione()))
+                .collect(Collectors.toList());
     }
 
+    @Transactional
     public Locandine createLocandine(LocandineRequest locandineRequest) {
         Locandine locandine = Locandine.builder()
                 .immagineurl(locandineRequest.getImmagineurl())

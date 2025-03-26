@@ -7,5 +7,4 @@ import java.util.Optional;
 
 public interface StudenteRepo extends JpaRepository<Studenti, Long> {
     Optional<Studenti> findByNome(String nome);
-    Optional<Studenti> findByCognome(String cognome);
 }

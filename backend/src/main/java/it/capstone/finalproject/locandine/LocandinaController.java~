@@ -6,22 +6,22 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/locandine")
+@RequestMapping("/api/v1/locandine")
 @RequiredArgsConstructor
-public class locandinaController {
+public class LocandinaController {
     private final LocandineService locandineService;
-    @GetMapping
+
+    @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public LocandineResponse getLocandine() {
-        return locandineService.getLocandine();
+    public LocandineResponse getLocandine(@PathVariable Long id) {
+        return locandineService.getLocandine(id);
     }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Locandine createLocandine(@RequestBody LocandineRequest locandineRequest) {
-    try {
         return locandineService.createLocandine(locandineRequest);
-    } catch (Exception e) {
-        throw new RuntimeException("Error creating locandine", e);
-    }
     }
 }
+
+
