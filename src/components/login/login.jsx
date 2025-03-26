@@ -1,4 +1,5 @@
 import styles from './login.module.css'
+import { jwtDecode } from 'jwt-decode'
 
 function Login() {
   return (
@@ -50,7 +51,9 @@ function handleSubmit(event) {
     })
     .then((result) => {
       localStorage.setItem('token', result.token)
-      localStorage.setItem('role', result.role)
+      const decoded = jwtDecode(result.token)
+      const role = decoded.roles[0]
+      sessionStorage.setItem('role', role)
 
       if (result.role === 'admin') {
         window.location.href = '/admin'

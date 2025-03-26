@@ -5,16 +5,17 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/api/v1/locandine")
+@RequestMapping("/locandine")
 @RequiredArgsConstructor
 public class LocandinaController {
     private final LocandineService locandineService;
 
-    @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    public LocandineResponse getLocandine(@PathVariable Long id) {
-        return locandineService.getLocandine(id);
+    @GetMapping
+    public List<LocandineResponse> getAllLocandine() {
+        return locandineService.getAllLocandine();
     }
 
     @PostMapping

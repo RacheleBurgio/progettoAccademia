@@ -1,6 +1,5 @@
 package it.capstone.finalproject.locandine;
 
-import it.capstone.finalproject.entities.Locandine;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +19,8 @@ public class LocandinaController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Locandine createLocandine(@RequestBody LocandineRequest locandineRequest) {
-        return locandineService.createLocandine(locandineRequest);
+    public LocandineResponse createLocandine(@RequestBody LocandineRequest locandineRequest) {
+        return locandineService.createLocandina(locandineRequest);
     }
 }
 

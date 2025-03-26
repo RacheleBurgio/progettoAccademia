@@ -87,7 +87,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             "/error",
             "/sw.js",
             "/Api/admin/*",
-            "/*"
+            "/Api/*"
     );
 
 

@@ -20,12 +20,24 @@ public class LocandineService {
                 .map(l -> new LocandineResponse(l.getId(), l.getImmagineurl(), l.getDataCreazione()))
                 .collect(Collectors.toList());
     }
+    @Transactional
+    public LocandineResponse createLocandina(LocandineRequest request) {
+        Locandine locandina = Locandine.builder()
+                .immagineurl(request.getImmagineurl())
+                .build();
+
+        return convertToResponse(locandineRepository.save(locandina));
+    }
+    private LocandineResponse convertToResponse(Locandine locandina) {
+        return LocandineResponse.builder()
+                .id(locandina.getId())
+                .immagineurl(locandina.getImmagineurl())
+                .dataCreazione(locandina.getDataCreazione())
+                .build();
+    }
 
     @Transactional
-    public Locandine createLocandine(LocandineRequest locandineRequest) {
-        Locandine locandine = Locandine.builder()
-                .immagineurl(locandineRequest.getImmagineurl())
-                .build();
-        return locandineRepository.save(locandine);
+    public void deleteLocandina(Long id) {
+        locandineRepository.deleteById(id);
     }
 }

@@ -6,20 +6,17 @@ const SpettacoliEventi = () => {
   const [images, setImages] = useState([])
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
-
+  const role = sessionStorage.getItem('role')
+  console.log('ruolocorrente', role)
   useEffect(() => {
     const fetchLocandine = async () => {
       try {
-        const token = localStorage.getItem('token')
+        const token = sessionStorage.getItem('token')
 
-        if (!token) {
-          throw new Error('Utente non autenticato. Effettua il login.')
-        }
+        const headers = token ? { Authorization: `Bearer ${token}` } : {} // Solo se l'utente è loggato
 
         const response = await fetch('http://localhost:8080/locandine', {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+          headers,
         })
 
         if (!response.ok) {
@@ -27,27 +24,25 @@ const SpettacoliEventi = () => {
         }
 
         const data = await response.json()
-        console.log('Dati ricevuti:', data) // Debug: verifica la struttura dei dati
+        console.log('Dati ricevuti:', data)
 
-        // Prima verifichiamo che data sia un array
         if (!Array.isArray(data)) {
           throw new Error('Formato dati non valido: atteso un array')
         }
 
-        // Ordina per dataCreazione (dalla più recente alla più vecchia)
+        // Ordinare per dataCreazione dalla più recente alla più vecchia
         const sortedImages = [...data]
           .sort((a, b) => {
-            // Converti le date in timestamp per un confronto preciso
             const dateA = new Date(
               a.dataCreazione || a.createdAt || a.date
             ).getTime()
             const dateB = new Date(
               b.dataCreazione || b.createdAt || b.date
             ).getTime()
-            return dateB - dateA // Ordine decrescente
+            return dateB - dateA
           })
           .map((item) => item.immagineurl || item.url || item)
-          .filter((url) => url) // Filtra eventuali valori nulli/undefined
+          .filter((url) => url)
 
         setImages(sortedImages)
       } catch (err) {
@@ -116,9 +111,6 @@ const SpettacoliEventi = () => {
               </h2>
             </div>
 
-            {loading && <p className="text-center">Caricamento immagini...</p>}
-            {error && <p className="text-danger text-center">{error}</p>}
-
             {!loading && !error && (
               <div className="mt-4">
                 <h3 className={styles.titoli}>Gallery Eventi</h3>
@@ -132,6 +124,8 @@ const SpettacoliEventi = () => {
                           className="img-fluid rounded shadow"
                           style={{ maxHeight: '300px', objectFit: 'cover' }}
                         />
+                        {/* Bottone visibile solo agli admin */}
+                        {role === 'ROLE_ADMIN' && <button>Admin Button</button>}
                       </Col>
                     ))
                   ) : (

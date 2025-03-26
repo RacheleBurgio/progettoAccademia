@@ -39,10 +39,10 @@ function MyNav() {
               <Dropdown.Item as={Link} to="/etichetta">
                 Etichetta
               </Dropdown.Item>
-              <Dropdown.Item href="#testimonianze">
+              <Dropdown.Item as={Link} to="/artistiinportafoglio">
                 Artisti in Portafoglio
               </Dropdown.Item>
-              <Dropdown.Item href="#testimonianze">
+              <Dropdown.Item as={Link} to="/studiodiregistrazione">
                 Studio di registrazione
               </Dropdown.Item>
             </Dropdown.Menu>
