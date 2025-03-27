@@ -1,9 +1,24 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import styles from './INostriCorsi.module.css'
+import { Helmet } from 'react-helmet-async'
 
 const INostriCorsi = () => {
   return (
     <div>
+      <Helmet>
+        <title>
+          I Nostri Corsi | Accademia Con Noi è Tutta Un'Altra Musica
+        </title>
+        <meta
+          name="description"
+          content="Scopri i corsi professionali della nostra accademia: canto moderno, pianoforte, chitarra, solfeggio e molto altro. Formazione completa per aspiranti musicisti e vocal coach."
+        />
+        <meta
+          name="keywords"
+          content=" corso canto palermo, lezioni pianoforte, scuola musica palermo, canto moderno, formazione vocal coach, corso chitarra, solfeggio, storia della musica, accademia musicale"
+        />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <h1
         className={`${styles.titoloCorsi} text-center`}
         style={{ backgroundImage: 'url(/tastiera.jpg)' }}

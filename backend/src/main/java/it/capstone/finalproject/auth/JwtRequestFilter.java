@@ -86,8 +86,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             "/v3/api-docs/**",
             "/error",
             "/sw.js",
-            "/Api/admin/*",
-            "/*"
+            "/api/admin/**",
+            "/api/admin/*",
+            "/api/locandine/**",
+            "/api/locandine/*"
     );
 
 

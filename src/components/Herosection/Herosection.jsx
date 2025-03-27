@@ -2,11 +2,24 @@ import { Container, Row, Col } from 'react-bootstrap'
 import styles from './Herosection.module.css'
 import Presentazione from '../Presentazione/Presentazione'
 import News from '../News/News'
+import { Helmet } from 'react-helmet-async'
 
 function HeroSection() {
-  console.log('Render HeroSection')
   return (
     <>
+      <Helmet>
+        <title>Con Noi è tutta un'altra Musica</title>
+        <meta
+          name="description"
+          content="Scopri la nostra Accademia di Canto e Musica Moderna a Palermo! Offriamo lezioni di canto, strumento e composizioni professionali per tutte le età e livelli. La scuola si trova a Palermo"
+        />
+        <meta
+          name="keywords"
+          content="Scuola di canto Palermo, Lezioni di canto Palermo, Accademia di Musica Moderna, Corso di canto professionale, corso di strumento a Palermo, Label"
+        />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
       <Container fluid className={styles.contenitore}>
         <Row className="w-100 align-items-center">
           {/* Logo e Titolo */}
@@ -70,11 +83,10 @@ function HeroSection() {
             </div>
           </Col>
         </Row>
+        <Presentazione />
       </Container>
 
       {/* Sezioni aggiuntive */}
-      <Presentazione />
-      <News />
     </>
   )
 }

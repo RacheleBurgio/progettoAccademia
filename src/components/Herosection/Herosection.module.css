@@ -24,6 +24,7 @@ iframe {
     rgba(0, 25, 115, 1) 59%,
     rgba(4, 13, 110, 1) 100%
   );
+  padding-bottom: 50px;
 }
 
 .logo {

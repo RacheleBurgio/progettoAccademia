@@ -1,10 +1,24 @@
 import { Container, Row, Col, Carousel, Card } from 'react-bootstrap'
 import Cardz from './Cardsz'
 import styles from './ChiSiamo.module.css'
+import { Helmet } from 'react-helmet-async'
 
 const ChiSiamo = () => {
   return (
     <div className={styles.sfondo}>
+      <Helmet>
+        <title>Chi Siamo</title>
+        <meta
+          name="description"
+          content="Scopri la nostra storia, i nostri corsi di canto e musica moderna a Palermo, e perché sceglierci come accademia di formazione musicale."
+        />
+        <meta
+          name="keywords"
+          content="Accademia di canto moderno a Palermo, corsi di canto e strumenti musicali, formazione musicale, eventi musicali, corsi di composizione a Palermo, accademia con etichetta discografica"
+        />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
       <h1
         className={`${styles.Titolo} text-center`}
         style={{ backgroundImage: 'url(/SiamoBack.jpg)' }}
@@ -35,46 +49,27 @@ const ChiSiamo = () => {
               <Carousel>
                 <Carousel.Item>
                   <img
-                    src="/prova3.png"
+                    src="/prova3.jpg"
                     alt="First slide"
                     className="d-block w-100"
-                    style={{ height: '500px', objectFit: 'cover' }}
+                    style={{ height: '550px', objectFit: 'cover' }}
                   />
-                  <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>
-                      Nulla vitae elit libero, a pharetra augue mollis interdum.
-                    </p>
-                  </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
-                    src="/prova1.png"
+                    src="/prova1.jpg"
                     alt="Second slide"
                     className="d-block w-100"
-                    style={{ height: '500px', objectFit: 'cover' }}
+                    style={{ height: '550px', objectFit: 'cover' }}
                   />
-                  <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
-                    src="/prova2.png"
+                    src="/prova2.jpg"
                     alt="Third slide"
                     className="d-block w-100"
-                    style={{ height: '500px', objectFit: 'cover' }}
+                    style={{ height: '550px', objectFit: 'cover' }}
                   />
-                  <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                      Praesent commodo cursus magna, vel scelerisque nisl
-                      consectetur.
-                    </p>
-                  </Carousel.Caption>
                 </Carousel.Item>
               </Carousel>
             </div>

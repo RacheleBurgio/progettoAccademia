@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from 'react'
 import styles from './SpettacoliEventi.module.css'
 import { Container, Row, Col } from 'react-bootstrap'
-import { useState, useEffect } from 'react'
 
 const SpettacoliEventi = () => {
   const [images, setImages] = useState([])
@@ -8,16 +8,20 @@ const SpettacoliEventi = () => {
   const [loading, setLoading] = useState(true)
   const role = sessionStorage.getItem('role')
   console.log('ruolocorrente', role)
+
   useEffect(() => {
     const fetchLocandine = async () => {
       try {
         const token = sessionStorage.getItem('token')
 
-        const headers = token ? { Authorization: `Bearer ${token}` } : {} // Solo se l'utente è loggato
+        const headers = token ? { Authorization: `Bearer ${token}` } : {}
 
-        const response = await fetch('http://localhost:8080/locandine', {
-          headers,
-        })
+        const response = await fetch(
+          'http://localhost:8080/api/locandine/all',
+          {
+            headers,
+          }
+        )
 
         if (!response.ok) {
           throw new Error(`Errore HTTP: ${response.status}`)
@@ -30,7 +34,6 @@ const SpettacoliEventi = () => {
           throw new Error('Formato dati non valido: atteso un array')
         }
 
-        // Ordinare per dataCreazione dalla più recente alla più vecchia
         const sortedImages = [...data]
           .sort((a, b) => {
             const dateA = new Date(
@@ -41,8 +44,14 @@ const SpettacoliEventi = () => {
             ).getTime()
             return dateB - dateA
           })
-          .map((item) => item.immagineurl || item.url || item)
-          .filter((url) => url)
+          .map((item) => {
+            console.log('Item:', item)
+            return {
+              id: item.id || null,
+              immagineurl: item.immagineurl || item.url || null, // Usa null se manca
+            }
+          })
+          .filter((image) => image.immagineurl)
 
         setImages(sortedImages)
       } catch (err) {
@@ -55,6 +64,105 @@ const SpettacoliEventi = () => {
 
     fetchLocandine()
   }, [])
+
+  const handleDelete = async (id) => {
+    try {
+      const token = localStorage.getItem('token')
+      console.log('token', token)
+      const response = await fetch(
+        `http://localhost:8080/api/locandine/delete/${id}`,
+        {
+          method: 'DELETE',
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      )
+
+      if (!response.ok) {
+        throw new Error('Errore durante la cancellazione')
+      }
+
+      setImages(images.filter((image) => image.id !== id)) // Ora usiamo l'id per filtrare
+    } catch (error) {
+      console.error('Errore nella cancellazione:', error)
+      alert('Errore nella cancellazione')
+    }
+  }
+
+  const [imageData, setImageData] = useState({ id: null, immagineurl: '' })
+
+  const handleUpload = async (e) => {
+    e.preventDefault()
+    setError(null)
+    setLoading(true)
+
+    const fileInput = e.target.elements.file
+    if (!fileInput || !fileInput.files || fileInput.files.length === 0) {
+      setError('Seleziona un file prima di procedere')
+      setLoading(false)
+      return
+    }
+
+    const file = fileInput.files[0]
+    console.log('[DEBUG] File selezionato:', {
+      name: file.name,
+      type: file.type,
+      size: `${(file.size / 1024 / 1024).toFixed(2)} MB`,
+    })
+
+    const formData = new FormData()
+    formData.append('file', file)
+
+    try {
+      const token = localStorage.getItem('token')
+      if (!token) {
+        throw new Error('Token JWT mancante. Effettua il login.')
+      }
+
+      console.log('[DEBUG] Token JWT:', token.slice(0, 10) + '...')
+
+      const response = await fetch(
+        'http://localhost:8080/api/images/uploadme',
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          body: formData,
+        }
+      )
+
+      if (!response.ok) {
+        throw new Error("Errore nell'upload dell'immagine.")
+      }
+      const body = JSON.stringify({
+        immagineurl: response.imageUrl,
+      })
+      console.log(response)
+      console.log(body)
+      const responseLocandina = await fetch(
+        'http://localhost:8080/api/locandine/create',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+          body,
+        }
+      )
+
+      const { id, immagineurl } = await responseLocandina.json() // Assicurati di convertire la risposta in JSON
+
+      // Imposta lo stato con l'ID e l'URL
+      setImageData({ id, immagineurl })
+
+      setLoading(false)
+    } catch (error) {
+      console.error("Errore durante l'upload:", error)
+      setError("Errore nell'upload dell'immagine.")
+      setLoading(false)
+    }
+  }
 
   return (
     <div className={styles.sfondo}>
@@ -111,30 +219,57 @@ const SpettacoliEventi = () => {
               </h2>
             </div>
 
-            {!loading && !error && (
-              <div className="mt-4">
-                <h3 className={styles.titoli}>Gallery Eventi</h3>
-                <Row>
-                  {images.length > 0 ? (
-                    images.map((imageUrl, index) => (
-                      <Col key={index} xs={12} md={4} lg={3} className="mb-4">
-                        <img
-                          src={imageUrl}
-                          alt={`Evento ${index}`}
-                          className="img-fluid rounded shadow"
-                          style={{ maxHeight: '300px', objectFit: 'cover' }}
-                        />
-                        {/* Bottone visibile solo agli admin */}
-                        {role === 'ROLE_ADMIN' && <button>Admin Button</button>}
-                      </Col>
-                    ))
-                  ) : (
-                    <Col className="text-center">
-                      <p>Nessuna immagine disponibile</p>
-                    </Col>
-                  )}
-                </Row>
+            {loading ? (
+              <div className="text-center py-5">
+                <div className="spinner-border" role="status">
+                  <span className="visually-hidden">Caricamento...</span>
+                </div>
               </div>
+            ) : (
+              <Row>
+                {images.length > 0 ? (
+                  images.map((image) => (
+                    <Col
+                      key={image.id || image.immagineurl}
+                      xs={12}
+                      md={4}
+                      lg={3}
+                      className="mb-4 d-flex flex-column"
+                    >
+                      <div className="h-100 d-flex flex-column">
+                        <img
+                          src={image.immagineurl}
+                          alt={`Locandina ${image.titolo || 'evento'}`}
+                          className="img-fluid rounded-top"
+                          style={{
+                            height: '400px', // Imposta un'altezza fissa per tutte le immagini
+                            objectFit: 'cover', // Riempi l'area senza distorsioni
+                            width: '100%',
+                          }}
+                        />
+                        {role === 'ROLE_ADMIN' && (
+                          <div className="d-flex justify-content-start mt-2">
+                            <button
+                              onClick={() => handleDelete(image.id)}
+                              className="btn btn-danger"
+                            >
+                              <i className="bi bi-trash me-2"></i>
+                              Cancella Locandina
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    </Col>
+                  ))
+                ) : (
+                  <Col xs={12} className="text-center py-5">
+                    <div className="alert alert-info">
+                      <i className="bi bi-image me-2"></i>
+                      Nessuna immagine disponibile nella gallery
+                    </div>
+                  </Col>
+                )}
+              </Row>
             )}
           </Col>
         </Row>

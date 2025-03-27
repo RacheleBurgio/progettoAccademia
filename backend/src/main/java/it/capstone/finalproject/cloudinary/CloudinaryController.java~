@@ -31,7 +31,6 @@ public class CloudinaryController {
             String imageUrl = (String) result.get("secure_url");
 
             CloudinaryResponse response = new CloudinaryResponse(imageUrl);
-            System.out.println(response);
             return response;
 
 

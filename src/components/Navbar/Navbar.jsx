@@ -5,7 +5,7 @@ import styles from './Navbarcss.module.css'
 import Button from 'react-bootstrap/Button'
 import Dropdown from 'react-bootstrap/Dropdown'
 
-function MyNav() {
+const MyNav = () => {
   return (
     <Navbar className={styles.topNav} expand="lg">
       <Navbar.Brand as={Link} to="/" style={{ marginLeft: '15px' }}>
@@ -53,13 +53,19 @@ function MyNav() {
               Partnership
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href="#partner">
+              <Dropdown.Item as={Link} to="/casasanremolivebox">
                 Casa Sanremo live box
               </Dropdown.Item>
-              <Dropdown.Item href="#collaborazioni">Maestri</Dropdown.Item>
-              <Dropdown.Item href="#collaborazioni">Artisti</Dropdown.Item>
-              <Dropdown.Item href="#collaborazioni">Giornalisti</Dropdown.Item>
-              <Dropdown.Item href="#collaborazioni">
+              <Dropdown.Item as={Link} to="/maestri">
+                Maestri
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} to="/artisti">
+                Artisti
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} to="/giornalisti">
+                Giornalisti
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} to="/festivalofsong">
                 Giornalisti Festival od Song USA
               </Dropdown.Item>
             </Dropdown.Menu>
