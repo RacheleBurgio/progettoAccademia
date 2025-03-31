@@ -7,7 +7,7 @@ const ChiSiamo = () => {
   return (
     <div className={styles.sfondo}>
       <Helmet>
-        <title>Chi Siamo</title>
+        <title>Chi Siamo | Accademia Con Noi è Tutta Un'Altra Musica</title>
         <meta
           name="description"
           content="Scopri la nostra storia, i nostri corsi di canto e musica moderna a Palermo, e perché sceglierci come accademia di formazione musicale."

@@ -155,18 +155,20 @@ const CasaSanremo = () => {
               raffinato e culturale, arricchito da momenti di intrattenimento.
             </p>
             <p className={`${styles.testi} text-center`}>
-              Io, Noemi Fiotti, in qualità di Direttore Artistico dell'Accademia
-              "Con Noi è Tutta Un'Altra Musica" di Palermo, sono orgogliosa di
-              rappresentare i nostri allievi, portando con noi le loro sfide e
-              passioni musicali. Viviamo questa esperienza unica nel contesto
-              ufficiale di Casa Sanremo Livebox, un luogo che incarna la
-              crescita artistica e l’eccellenza musicale. Come Direttore
-              Artistico dell'Accademia di Canto e Musica Moderna di Palermo,
-              seguo con attenzione il percorso di crescita dei nostri allievi,
-              fornendo loro una Didattica di Alta Formazione Canoro/Musicale e
-              promuovendo le loro abilità sia a livello nazionale che
-              internazionale, con l'obiettivo di far emergere nuovi talenti nel
-              panorama musicale contemporaneo.
+              Io, <span className={styles.titoli}>Noemi Fiotti</span>, in
+              qualità di{' '}
+              <span className={styles.titoli}>Direttore Artistico</span>{' '}
+              dell'Accademia "Con Noi è Tutta Un'Altra Musica" di Palermo, sono
+              orgogliosa di rappresentare i nostri allievi, portando con noi le
+              loro sfide e passioni musicali. Viviamo questa esperienza unica
+              nel contesto ufficiale di Casa Sanremo Livebox, un luogo che
+              incarna la crescita artistica e l’eccellenza musicale. Come
+              Direttore Artistico dell'Accademia di Canto e Musica Moderna di
+              Palermo, seguo con attenzione il percorso di crescita dei nostri
+              allievi, fornendo loro una Didattica di Alta Formazione
+              Canoro/Musicale e promuovendo le loro abilità sia a livello
+              nazionale che internazionale, con l'obiettivo di far emergere
+              nuovi talenti nel panorama musicale contemporaneo.
             </p>
           </Col>
         </Row>
@@ -659,7 +661,7 @@ const CasaSanremo = () => {
               <Carousel.Item>
                 <div style={{ position: 'relative', paddingTop: '100%' }}>
                   <img
-                    src="/SeryVentura.JPEG"
+                    src="/FrancescoCapizzi.JPEG"
                     alt="First slide"
                     className="d-block w-100"
                     style={{
@@ -676,7 +678,7 @@ const CasaSanremo = () => {
               <Carousel.Item>
                 <div style={{ position: 'relative', paddingTop: '100%' }}>
                   <img
-                    src="/SeryVentura1.JPEG"
+                    src="/FrancescoCapizzi1.JPEG"
                     alt="Second slide"
                     className="d-block w-100"
                     style={{
@@ -693,7 +695,7 @@ const CasaSanremo = () => {
               <Carousel.Item>
                 <div style={{ position: 'relative', paddingTop: '100%' }}>
                   <img
-                    src="/SeryVentura2.JPEG"
+                    src="/FrancescoCapizzi2.JPEG"
                     alt="Third slide"
                     className="d-block w-100"
                     style={{
@@ -769,7 +771,7 @@ const CasaSanremo = () => {
               <Carousel.Item>
                 <div style={{ position: 'relative', paddingTop: '100%' }}>
                   <img
-                    src="/SeryVentura.JPEG"
+                    src="/IleniaImbergamo.JPEG"
                     alt="First slide"
                     className="d-block w-100"
                     style={{
@@ -786,7 +788,7 @@ const CasaSanremo = () => {
               <Carousel.Item>
                 <div style={{ position: 'relative', paddingTop: '100%' }}>
                   <img
-                    src="/SeryVentura1.JPEG"
+                    src="/IleniaImbergamo1.JPEG"
                     alt="Second slide"
                     className="d-block w-100"
                     style={{
@@ -803,7 +805,7 @@ const CasaSanremo = () => {
               <Carousel.Item>
                 <div style={{ position: 'relative', paddingTop: '100%' }}>
                   <img
-                    src="/SeryVentura2.JPEG"
+                    src="/IleniaImbergamo2.JPEG"
                     alt="Third slide"
                     className="d-block w-100"
                     style={{
@@ -881,7 +883,7 @@ const CasaSanremo = () => {
               <Carousel.Item>
                 <div style={{ position: 'relative', paddingTop: '100%' }}>
                   <img
-                    src="/SeryVentura.JPEG"
+                    src="/RiccardoPrecania.JPEG"
                     alt="First slide"
                     className="d-block w-100"
                     style={{
@@ -898,7 +900,7 @@ const CasaSanremo = () => {
               <Carousel.Item>
                 <div style={{ position: 'relative', paddingTop: '100%' }}>
                   <img
-                    src="/SeryVentura1.JPEG"
+                    src="/RiccardoPrecania1.JPEG"
                     alt="Second slide"
                     className="d-block w-100"
                     style={{
@@ -915,7 +917,7 @@ const CasaSanremo = () => {
               <Carousel.Item>
                 <div style={{ position: 'relative', paddingTop: '100%' }}>
                   <img
-                    src="/SeryVentura2.JPEG"
+                    src="/RiccardoPrecania2.JPEG"
                     alt="Third slide"
                     className="d-block w-100"
                     style={{

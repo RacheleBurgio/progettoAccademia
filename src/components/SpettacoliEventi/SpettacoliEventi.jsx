@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './SpettacoliEventi.module.css'
 import { Container, Row, Col } from 'react-bootstrap'
+import { Helmet } from 'react-helmet-async'
 
 const SpettacoliEventi = () => {
   const [images, setImages] = useState([])
@@ -166,6 +167,20 @@ const SpettacoliEventi = () => {
 
   return (
     <div className={styles.sfondo}>
+      <Helmet>
+        <title>
+          Spettacoli ed Eventi | Accademia Con Noi è Tutta Un'Altra Musica
+        </title>
+        <meta
+          name="description"
+          content="Scopri i nostri eventi musicali, le nostre attività e le nostre attività musicali, e resta aggiornato il più possibile."
+        />
+        <meta
+          name="keywords"
+          content="Spettacoli a Palermo, Locandien spettacoli, il nostro palcoscenico, eventi musicali, cultura condivisione e crescita, accademia con etichetta discografica"
+        />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <h1
         className={`${styles.Titolo} text-center`}
         style={{ backgroundImage: 'url(/spettacolii.jpg)' }}

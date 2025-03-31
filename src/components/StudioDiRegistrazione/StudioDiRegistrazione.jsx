@@ -1,9 +1,24 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import styles from './StudioDiRegistrazione.module.css'
+import { Helmet } from 'react-helmet-async'
 
 const Etichetta = () => {
   return (
     <div className={styles.sfondo}>
+      <Helmet>
+        <title>
+          Studio di registrazione | Accademia Con Noi è Tutta Un'Altra Musica
+        </title>
+        <meta
+          name="description"
+          content="Siamo una casa discografica Innovativa, realizziamo prodotti discografici di qualità, diamo servizi completi per artisti emergenti e tecnologia all'avanguardia e Supporto Professionale."
+        />
+        <meta
+          name="keywords"
+          content="Casa discografica a Palermo, Studio di registrazione, mixaggio a palermo, eventi musicali a palermo, servizi per casa discografica a Palermo, accademia con etichetta discografica"
+        />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <h1
         className={`${styles.Titolo} text-center`}
         style={{ backgroundImage: 'url(/MixDaSostutuire.JPEG)' }}
