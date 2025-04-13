@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import { Row, Col, Card } from 'react-bootstrap'
 
 const Cardz = () => {
   return (
@@ -58,7 +58,7 @@ const Cardz = () => {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: 'rgba(0, 0, 0, 0.4)', // Overlay scuro semitrasparente
+                background: 'rgba(0, 0, 0, 0.4)',
                 zIndex: 1,
               }}
             />

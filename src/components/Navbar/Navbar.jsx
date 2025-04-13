@@ -14,7 +14,7 @@ const MyNav = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Dropdown as={Nav.Item}>
+          {/* <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white">
               Accademia
             </Dropdown.Toggle>
@@ -73,16 +73,16 @@ const MyNav = () => {
 
           <Nav.Link href="#masterclass" className="text-white">
             Masterclass
-          </Nav.Link>
+          </Nav.Link> */}
 
-          <Button
+          {/* <Button
             as={Link}
             to="/login"
             className={styles.bottone}
             variant="outline-info"
           >
             Area Riservata
-          </Button>
+          </Button> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

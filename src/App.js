@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async' // ✅ Importa HelmetProvider
+import { HelmetProvider } from 'react-helmet-async'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
@@ -25,7 +25,7 @@ function App() {
         <MyNav />
         <Routes>
           <Route path="/" element={<HeroSection />} />
-          <Route path="/chisiamo" element={<ChiSiamo />} />
+          {/* <Route path="/chisiamo" element={<ChiSiamo />} />
           <Route path="/nostricorsi" element={<INostriCorsi />} />
           <Route path="/spettacolieventi" element={<SpettacoliEventi />} />
           <Route path="/login" element={<Login />} />
@@ -38,7 +38,7 @@ function App() {
           <Route path="/artisti" element={<Artisti />} />
           <Route path="/festivalofsong" element={<FestivalOfSong />} />
           <Route path="/giornalisti" element={<Giornalisti />} />
-          <Route path="/maestri" element={<Maestri />} />
+          <Route path="/maestri" element={<Maestri />} /> */}
         </Routes>
         <Footer />
       </Router>
