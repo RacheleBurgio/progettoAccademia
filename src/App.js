@@ -17,11 +17,13 @@ import Artisti from './components/Artisti/Artisti'
 import FestivalOfSong from './components/FestivalOfSong/FestivalOfSong'
 import Giornalisti from './components/Giornalisti/Giornalisti'
 import Maestri from './components/Maestri/Maestri'
+import Iubenda from './components/Cookies/Iubenda'
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
+        <Iubenda />
         <MyNav />
         <Routes>
           <Route path="/" element={<HeroSection />} />
@@ -40,6 +42,7 @@ function App() {
           <Route path="/giornalisti" element={<Giornalisti />} />
           <Route path="/maestri" element={<Maestri />} /> */}
         </Routes>
+
         <Footer />
       </Router>
     </HelmetProvider>
