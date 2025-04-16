@@ -153,7 +153,7 @@ function Presentazione() {
                   Maestri
                 </Card.Title>
                 <Card.Text style={{ zIndex: 2, color: 'white' }}>
-                  Scopri i Mestri che collaborano con noi.
+                  Scopri i Maestri che collaborano con noi.
                 </Card.Text>
               </Card.Body>
             </Card>
