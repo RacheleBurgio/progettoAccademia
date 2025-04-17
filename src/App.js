@@ -28,7 +28,7 @@ function App() {
           {/* <Route path="/chisiamo" element={<ChiSiamo />} />
           <Route path="/nostricorsi" element={<INostriCorsi />} />
           <Route path="/spettacolieventi" element={<SpettacoliEventi />} /> */}
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           {/* <Route path="/etichetta" element={<Etichetta />} />
           <Route
             path="/studioDiRegistrazione"
