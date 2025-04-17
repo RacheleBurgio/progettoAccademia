@@ -1,5 +1,6 @@
 import styles from './login.module.css'
 import { jwtDecode } from 'jwt-decode'
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL
 
 function Login() {
   return (
@@ -36,7 +37,7 @@ function handleSubmit(event) {
     password: formData.get('password'),
   }
 
-  fetch('http://localhost:8080/api/auth/login', {
+  fetch(`${REACT_APP_API_URL}/api/auth/login`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

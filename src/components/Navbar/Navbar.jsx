@@ -75,14 +75,14 @@ const MyNav = () => {
             Masterclass
           </Nav.Link> */}
 
-          {/* <Button
+          <Button
             as={Link}
             to="/login"
             className={styles.bottone}
             variant="outline-info"
           >
             Area Riservata
-          </Button> */}
+          </Button>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
