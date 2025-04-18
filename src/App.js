@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
@@ -20,7 +20,10 @@ import Maestri from './components/Maestri/Maestri'
 
 function App() {
   return (
-    <HelmetProvider>
+    <>
+      <Helmet>
+        <link rel="icon" href="/ros-41.png?v=2" type="image/png" />
+      </Helmet>
       <Router>
         <MyNav />
         <Routes>
@@ -43,7 +46,7 @@ function App() {
 
         <Footer />
       </Router>
-    </HelmetProvider>
+    </>
   )
 }
 
