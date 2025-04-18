@@ -76,7 +76,7 @@ function HeroSection() {
           <Col md={7} xs={12} className="text-center text-white p-3">
             <div className={`${styles.videoContainer} ratio ratio-16x9`}>
               <iframe
-                src="https://www.youtube.com/embed/videoseries?list=UU_gqvjgs7PF7DGo7vNtPxvQ&index=0&autoplay=1"
+                src="https://www.youtube.com/embed/videoseries?list=UU_gqvjgs7PF7DGo7vNtPxvQ&index=0"
                 allowFullScreen
                 className={styles.iframe}
               ></iframe>
