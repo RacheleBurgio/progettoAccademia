@@ -74,10 +74,10 @@ function HeroSection() {
 
           {/* Video */}
           <Col md={7} xs={12} className="text-center text-white p-3">
-            <div className={`ratio ratio-16x9`}>
+            <div className={`${styles.video} ratio ratio-16x9`}>
               <iframe
-                src="https://www.youtube.com/embed/videoseries?list=UU_gqvjgs7PF7DGo7vNtPxvQ&index=0"
-                // src="https://www.youtube.com/embed/X-32bFUFl2E?si=F-TG88lEFOiLhkXN"
+                // src="https://www.youtube.com/embed/videoseries?list=UU_gqvjgs7PF7DGo7vNtPxvQ&index=0"
+                src="https://www.youtube.com/embed/FmbOjjSaH3I?si=pEfingdUOC5VDiQw"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
