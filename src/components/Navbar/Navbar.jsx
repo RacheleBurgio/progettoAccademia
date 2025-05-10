@@ -39,15 +39,15 @@ const MyNav = () => {
               <Dropdown.Item as={Link} to="/etichetta">
                 Etichetta
               </Dropdown.Item>
-              <Dropdown.Item as={Link} to="/artistiinportafoglio">
+              <Dropdown.Item as={Link} to="/ArtistiInPortafoglio">
                 Artisti in Portafoglio
               </Dropdown.Item>
               <Dropdown.Item as={Link} to="/studiodiregistrazione">
                 Studio di registrazione
               </Dropdown.Item>
             </Dropdown.Menu>
-          </Dropdown>
-
+          </Dropdown> */}
+          {/*
           <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white">
               Partnership

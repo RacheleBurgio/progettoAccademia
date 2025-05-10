@@ -41,7 +41,13 @@ const Footer = () => {
           {/* Informazioni Aziendali */}
           <Col md={3} className="mb-3">
             <h5>Con noi è tutta un'altra musica</h5>
-            <p> Via Giovanbattista Ughetti, 17, 90127 Palermo PA</p>
+            <a
+              href="https://www.google.com/maps?client=opera-gx&oe=UTF-8&um=1&ie=UTF-8&fb=1&gl=it&sa=X&geocode=KfVr8ll-7xkTMeOLy99EFXY4&daddr=Via+Giovanbattista+Ughetti,+17,+90127+Palermo+PA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Via Giovanbattista Ughetti, 17, 90127 Palermo PA
+            </a>
           </Col>
 
           {/* Link Utili */}

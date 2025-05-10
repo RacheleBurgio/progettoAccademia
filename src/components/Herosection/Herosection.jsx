@@ -2,6 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import styles from './Herosection.module.css'
 import Presentazione from '../Presentazione/Presentazione'
 import News from '../News/News'
+import FloatingWhatsAppButton from '../FloatingWhatsappButton/FloatingWhatsappButton'
 import { Helmet } from 'react-helmet-async'
 
 function HeroSection() {
@@ -33,12 +34,13 @@ function HeroSection() {
               alt="logo"
               className={`${styles.logo} img-fluid`}
             />
-            <div className={styles.titles}>
+            <div className={`${styles.titles} social-icons`}>
               <h3 className={`${styles.title3} mt-3`}>
                 Scuola di Canto Moderno <br /> Accademia di Musica <br />
                 Label
               </h3>
-              <h5 style={{ paddingTop: '15px' }}>Seguici</h5>
+              <h5 style={{ paddingTop: '15px' }}>Seguici e contattaci</h5>
+
               <a
                 href="https://www.facebook.com/connoietuttaunaltramusicaacademy"
                 target="_blank"
@@ -49,6 +51,7 @@ function HeroSection() {
                   style={{ paddingRight: '10px', fontSize: '30px' }}
                 ></i>
               </a>
+
               <a
                 href="https://www.youtube.com/c/ConNoièTuttaunaltraMusica"
                 target="_blank"
@@ -66,6 +69,16 @@ function HeroSection() {
               >
                 <i
                   className="bi bi-instagram"
+                  style={{ paddingRight: '10px', fontSize: '30px' }}
+                ></i>
+              </a>
+              <a
+                href="https://wa.me/393293655954"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className="bi bi-whatsapp"
                   style={{ paddingRight: '10px', fontSize: '30px' }}
                 ></i>
               </a>
@@ -89,6 +102,7 @@ function HeroSection() {
           </Col>
         </Row>
         <Presentazione />
+        <FloatingWhatsAppButton />
       </Container>
 
       {/* Sezioni aggiuntive */}

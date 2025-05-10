@@ -6,6 +6,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import MyNav from './components/Navbar/Navbar'
 import HeroSection from './components/Herosection/Herosection'
 import Footer from './components/Footer/Footer'
+import ArtistiInPortafolgio from './components/ArtistiInPortafogliio/ArtistiInPortafoglio'
+import AuroraD1 from './components/AuroraD1/AuroraD1'
 import ChiSiamo from './components/ChiSiamo/ChiSiamo'
 import INostriCorsi from './components/INostriCorsi/INostriCorsi'
 import SpettacoliEventi from './components/SpettacoliEventi/SpettacoliEventi'
@@ -28,6 +30,10 @@ function App() {
         <MyNav />
         <Routes>
           <Route path="/" element={<HeroSection />} />
+          <Route
+            path="/ArtistiInPortafoglio"
+            element={<ArtistiInPortafolgio />}
+          />
           {/* <Route path="/chisiamo" element={<ChiSiamo />} />
           <Route path="/nostricorsi" element={<INostriCorsi />} />
           <Route path="/spettacolieventi" element={<SpettacoliEventi />} /> */}
