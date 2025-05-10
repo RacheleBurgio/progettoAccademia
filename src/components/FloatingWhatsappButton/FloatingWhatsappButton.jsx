@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './FloatingWhatsAppButton.module.css'
 
 const FloatingWhatsAppButton = () => {
-  const phoneNumber = '393293655954'
+  const phoneNumber = '393496064054'
   const url = `https://wa.me/${phoneNumber}`
 
   return (

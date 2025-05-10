@@ -73,7 +73,7 @@ function HeroSection() {
                 ></i>
               </a>
               <a
-                href="https://wa.me/393293655954"
+                href="https://wa.me/393496064054"
                 target="_blank"
                 rel="noopener noreferrer"
               >
