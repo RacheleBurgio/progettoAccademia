@@ -42,7 +42,7 @@ const Footer = () => {
           <Col md={3} className="mb-3">
             <h5>Con noi è tutta un'altra musica</h5>
             <a
-              href="https://www.google.com/maps?client=opera-gx&oe=UTF-8&um=1&ie=UTF-8&fb=1&gl=it&sa=X&geocode=KfVr8ll-7xkTMeOLy99EFXY4&daddr=Via+Giovanbattista+Ughetti,+17,+90127+Palermo+PA"
+              href="https://maps.app.goo.gl/bf1M9qukW3gKboca9?g_st=com.google.maps.preview.copy"
               target="_blank"
               rel="noopener noreferrer"
             >
