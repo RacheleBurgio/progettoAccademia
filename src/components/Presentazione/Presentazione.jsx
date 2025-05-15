@@ -1,5 +1,6 @@
 import { Container, Row, Col, Card } from 'react-bootstrap'
 import styles from './Presentazione.module.css'
+import { Link } from 'react-router-dom'
 
 function Presentazione() {
   return (
@@ -84,41 +85,44 @@ function Presentazione() {
           </Col>
 
           <Col xs={12} sm={6} md={3} lg={3}>
-            <Card
-              className="shadow h-100"
-              style={{
-                backgroundImage: 'url(/artistiInPortafoglio.jpeg)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                minHeight: '350px',
-              }}
-            >
-              <Card.Body
-                className="d-flex flex-column justify-content-center align-items-center"
-                style={{ position: 'relative' }}
+            <Link to="/ArtistiInPortafoglio" style={{ textDecoration: 'none' }}>
+              <Card
+                className="shadow h-100"
+                style={{
+                  backgroundImage: 'url(/artistiInPortafoglio.jpeg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  minHeight: '350px',
+                  cursor: 'pointer',
+                }}
               >
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    background: 'rgba(0, 0, 0, 0.4)', // Overlay scuro semitrasparente
-                    zIndex: 1,
-                  }}
-                />
-                <Card.Title
-                  className="shadow"
-                  style={{ zIndex: 2, color: 'white' }}
+                <Card.Body
+                  className="d-flex flex-column justify-content-center align-items-center"
+                  style={{ position: 'relative' }}
                 >
-                  Artisti in Portafoglio
-                </Card.Title>
-                <Card.Text style={{ zIndex: 2, color: 'white' }}>
-                  Scopri i nostri Artisti.
-                </Card.Text>
-              </Card.Body>
-            </Card>
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      background: 'rgba(0, 0, 0, 0.4)',
+                      zIndex: 1,
+                    }}
+                  />
+                  <Card.Title
+                    className="shadow"
+                    style={{ zIndex: 2, color: 'white' }}
+                  >
+                    Artisti in Portafoglio
+                  </Card.Title>
+                  <Card.Text style={{ zIndex: 2, color: 'white' }}>
+                    Scopri i nostri Artisti.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Link>
           </Col>
 
           <Col xs={12} sm={6} md={3} lg={3}>
