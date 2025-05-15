@@ -29,24 +29,24 @@ const MyNav = () => {
                 Spettacoli ed eventi
               </Dropdown.Item>
             </Dropdown.Menu>
-          </Dropdown>
+          </Dropdown> */}
 
           <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white">
               Production
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item as={Link} to="/etichetta">
+              {/* <Dropdown.Item as={Link} to="/etichetta">
                 Etichetta
-              </Dropdown.Item>
+              </Dropdown.Item> */}
               <Dropdown.Item as={Link} to="/ArtistiInPortafoglio">
                 Artisti in Portafoglio
               </Dropdown.Item>
-              <Dropdown.Item as={Link} to="/studiodiregistrazione">
+              {/* <Dropdown.Item as={Link} to="/studiodiregistrazione">
                 Studio di registrazione
-              </Dropdown.Item>
+              </Dropdown.Item> */}
             </Dropdown.Menu>
-          </Dropdown> */}
+          </Dropdown>
           {/*
           <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white">
