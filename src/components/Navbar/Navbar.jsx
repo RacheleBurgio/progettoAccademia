@@ -14,12 +14,12 @@ const MyNav = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          {/* <Dropdown as={Nav.Item}>
+          <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white">
               Accademia
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item as={Link} to="/chisiamo">
+              {/* <Dropdown.Item as={Link} to="/chisiamo">
                 Chi siamo
               </Dropdown.Item>
               <Dropdown.Item as={Link} to="/nostricorsi">
@@ -27,13 +27,13 @@ const MyNav = () => {
               </Dropdown.Item>
               <Dropdown.Item as={Link} to="/spettacolieventi">
                 Spettacoli ed eventi
-              </Dropdown.Item>
+              </Dropdown.Item> */}
             </Dropdown.Menu>
-          </Dropdown> */}
+          </Dropdown>
 
           <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white">
-              Production
+              Productions
             </Dropdown.Toggle>
             <Dropdown.Menu>
               {/* <Dropdown.Item as={Link} to="/etichetta">
@@ -47,13 +47,13 @@ const MyNav = () => {
               </Dropdown.Item> */}
             </Dropdown.Menu>
           </Dropdown>
-          {/*
+
           <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white">
               Partnership
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item as={Link} to="/casasanremolivebox">
+              {/* <Dropdown.Item as={Link} to="/casasanremolivebox">
                 Casa Sanremo live box
               </Dropdown.Item>
               <Dropdown.Item as={Link} to="/maestri">
@@ -67,13 +67,13 @@ const MyNav = () => {
               </Dropdown.Item>
               <Dropdown.Item as={Link} to="/festivalofsong">
                 Giornalisti Festival od Song USA
-              </Dropdown.Item>
+              </Dropdown.Item> */}
             </Dropdown.Menu>
           </Dropdown>
 
           <Nav.Link href="#masterclass" className="text-white">
             Masterclass
-          </Nav.Link> */}
+          </Nav.Link>
 
           {/* <Button
             as={Link}
