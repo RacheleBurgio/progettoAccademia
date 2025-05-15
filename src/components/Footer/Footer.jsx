@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 
 const Footer = () => {
   useEffect(() => {
-    // Carica lo script iubenda.js solo se non è già presente
     if (
       !document.querySelector(
         'script[src="https://cdn.iubenda.com/iubenda.js"]'
@@ -67,6 +66,11 @@ const Footer = () => {
               <li>
                 <a href="#" className="text-white text-decoration-none">
                   Partnerships
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-white text-decoration-none">
+                  Masterclass
                 </a>
               </li>
             </ul>

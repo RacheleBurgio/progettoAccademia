@@ -16,7 +16,7 @@ const MyNav = () => {
         <Nav className="me-auto">
           <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white">
-              Accademia
+              Academy
             </Dropdown.Toggle>
             <Dropdown.Menu>
               {/* <Dropdown.Item as={Link} to="/chisiamo">
