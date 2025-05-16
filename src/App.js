@@ -19,6 +19,7 @@ import Artisti from './components/Artisti/Artisti'
 import FestivalOfSong from './components/FestivalOfSong/FestivalOfSong'
 import Giornalisti from './components/Giornalisti/Giornalisti'
 import Maestri from './components/Maestri/Maestri'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <link rel="icon" href="/ros-41.png?v=2" type="image/png" />
       </Helmet>
       <Router>
+        <ScrollToTop />
         <MyNav />
         <Routes>
           <Route path="/" element={<HeroSection />} />
