@@ -11,14 +11,18 @@ const MyNav = () => {
       <Navbar.Brand as={Link} to="/" style={{ marginLeft: '15px' }}>
         <img className={styles.logonav} src="/ros-41.png" alt="Logo" />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar.Toggle aria-controls="basic-navbar-nav">
+        <span className={styles.navbarTogglerIcon} />
+      </Navbar.Toggle>
+      <Navbar.Collapse id="basic-navbar-nav" className={styles.mobileCenter}>
         <Nav className="me-auto">
           <Dropdown as={Nav.Item}>
-            <Dropdown.Toggle as={Nav.Link} className="text-white">
+            <Dropdown.Toggle as={Nav.Link} className="text-white fs-5">
               Academy
             </Dropdown.Toggle>
-            <Dropdown.Menu>
+            <Dropdown.Menu
+              className={`bg-dark text-white ${styles.dropdownMenuCenter}`}
+            >
               {/* <Dropdown.Item as={Link} to="/chisiamo">
                 Chi siamo
               </Dropdown.Item>
@@ -32,14 +36,20 @@ const MyNav = () => {
           </Dropdown>
 
           <Dropdown as={Nav.Item}>
-            <Dropdown.Toggle as={Nav.Link} className="text-white">
+            <Dropdown.Toggle as={Nav.Link} className="text-white fs-5">
               Productions
             </Dropdown.Toggle>
-            <Dropdown.Menu>
+            <Dropdown.Menu
+              className={`bg-dark text-white ${styles.dropdownMenuCenter}`}
+            >
               {/* <Dropdown.Item as={Link} to="/etichetta">
                 Etichetta
               </Dropdown.Item> */}
-              <Dropdown.Item as={Link} to="/ArtistiInPortafoglio">
+              <Dropdown.Item
+                className=" text-white fs-5"
+                as={Link}
+                to="/ArtistiInPortafoglio"
+              >
                 Artisti in Portafoglio
               </Dropdown.Item>
               {/* <Dropdown.Item as={Link} to="/studiodiregistrazione">
@@ -49,10 +59,12 @@ const MyNav = () => {
           </Dropdown>
 
           <Dropdown as={Nav.Item}>
-            <Dropdown.Toggle as={Nav.Link} className="text-white">
+            <Dropdown.Toggle as={Nav.Link} className="text-white fs-5">
               Partnership
             </Dropdown.Toggle>
-            <Dropdown.Menu>
+            <Dropdown.Menu
+              className={`bg-dark text-white ${styles.dropdownMenuCenter}`}
+            >
               {/* <Dropdown.Item as={Link} to="/casasanremolivebox">
                 Casa Sanremo live box
               </Dropdown.Item>
@@ -71,7 +83,7 @@ const MyNav = () => {
             </Dropdown.Menu>
           </Dropdown>
 
-          <Nav.Link href="#masterclass" className="text-white">
+          <Nav.Link href="#masterclass" className="text-white fs-5">
             Masterclass
           </Nav.Link>
 
