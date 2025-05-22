@@ -18,12 +18,12 @@ const MyNav = () => {
         <Nav className="me-auto">
           <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white fs-5">
-              Academy
+              ACADEMY
             </Dropdown.Toggle>
-            <Dropdown.Menu
+            {/* <Dropdown.Menu
               className={`bg-dark text-white ${styles.dropdownMenuCenter}`}
             >
-              {/* <Dropdown.Item as={Link} to="/chisiamo">
+              <Dropdown.Item as={Link} to="/chisiamo">
                 Chi siamo
               </Dropdown.Item>
               <Dropdown.Item as={Link} to="/nostricorsi">
@@ -31,22 +31,20 @@ const MyNav = () => {
               </Dropdown.Item>
               <Dropdown.Item as={Link} to="/spettacolieventi">
                 Spettacoli ed eventi
-              </Dropdown.Item> */}
-            </Dropdown.Menu>
+              </Dropdown.Item>
+            </Dropdown.Menu> */}
           </Dropdown>
 
           <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white fs-5">
-              Productions
+              PRODUCTIONS
             </Dropdown.Toggle>
-            <Dropdown.Menu
-              className={`bg-dark text-white ${styles.dropdownMenuCenter}`}
-            >
+            <Dropdown.Menu className={`${styles.dropdownMenuCenter}`}>
               {/* <Dropdown.Item as={Link} to="/etichetta">
                 Etichetta
               </Dropdown.Item> */}
               <Dropdown.Item
-                className=" text-white fs-5"
+                className=" fs-5"
                 as={Link}
                 to="/ArtistiInPortafoglio"
               >
@@ -60,12 +58,10 @@ const MyNav = () => {
 
           <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link} className="text-white fs-5">
-              Partnership
+              PARTNERSHIPS
             </Dropdown.Toggle>
-            <Dropdown.Menu
-              className={`bg-dark text-white ${styles.dropdownMenuCenter}`}
-            >
-              {/* <Dropdown.Item as={Link} to="/casasanremolivebox">
+            {/* <Dropdown.Menu className={` ${styles.dropdownMenuCenter}`}>
+              <Dropdown.Item as={Link} to="/casasanremolivebox">
                 Casa Sanremo live box
               </Dropdown.Item>
               <Dropdown.Item as={Link} to="/maestri">
@@ -79,12 +75,12 @@ const MyNav = () => {
               </Dropdown.Item>
               <Dropdown.Item as={Link} to="/festivalofsong">
                 Giornalisti Festival od Song USA
-              </Dropdown.Item> */}
-            </Dropdown.Menu>
+              </Dropdown.Item>
+            </Dropdown.Menu> */}
           </Dropdown>
 
           <Nav.Link href="#masterclass" className="text-white fs-5">
-            Masterclass
+            MASTERCLASS
           </Nav.Link>
 
           {/* <Button
