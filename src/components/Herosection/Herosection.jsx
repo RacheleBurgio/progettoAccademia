@@ -30,7 +30,7 @@ function HeroSection() {
             className="d-flex flex-column justify-content-center align-items-center text-white text-center p-3"
           >
             <img
-              src="/logo.svg"
+              src="/LOGO.JPG"
               alt="logo"
               className={`${styles.logo} img-fluid`}
             />
