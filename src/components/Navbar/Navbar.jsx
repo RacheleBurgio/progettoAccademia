@@ -14,7 +14,6 @@ const MyNav = () => {
           <img className={styles.logonav} src="/ros-41.png" alt="Logo" />
         </Navbar.Brand>
 
-        {/* Toggle per mobile */}
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className="border-0 custom-toggler"
@@ -22,7 +21,6 @@ const MyNav = () => {
           <span className="navbar-toggler-icon" />
         </Navbar.Toggle>
 
-        {/* Offcanvas che si apre da sinistra su mobile */}
         <Navbar.Offcanvas
           id="offcanvas-navbar"
           aria-labelledby="offcanvas-navbar-label"
@@ -36,13 +34,19 @@ const MyNav = () => {
           <Offcanvas.Body>
             <Nav className="me-auto">
               <Dropdown as={Nav.Item}>
-                <Dropdown.Toggle as={Nav.Link} className=" fs-5">
+                <Dropdown.Toggle
+                  as={Nav.Link}
+                  className="fs-1 mb-4 d-flex justify-content-between align-items-center w-100"
+                >
                   ACADEMY
                 </Dropdown.Toggle>
               </Dropdown>
 
               <Dropdown as={Nav.Item}>
-                <Dropdown.Toggle as={Nav.Link} className=" fs-5">
+                <Dropdown.Toggle
+                  as={Nav.Link}
+                  className="fs-1 mb-4 d-flex justify-content-between align-items-center w-100"
+                >
                   PRODUCTIONS
                 </Dropdown.Toggle>
                 <Dropdown.Menu className={`${styles.dropdownMenuCenter}`}>
@@ -57,12 +61,18 @@ const MyNav = () => {
               </Dropdown>
 
               <Dropdown as={Nav.Item}>
-                <Dropdown.Toggle as={Nav.Link} className=" fs-5">
+                <Dropdown.Toggle
+                  as={Nav.Link}
+                  className="fs-1 mb-4 d-flex justify-content-between align-items-center w-100"
+                >
                   PARTNERSHIPS
                 </Dropdown.Toggle>
               </Dropdown>
 
-              <Nav.Link href="#masterclass" className=" fs-5">
+              <Nav.Link
+                href="#masterclass"
+                className="fs-1 mb-4 d-flex justify-content-start w-100"
+              >
                 MASTERCLASS
               </Nav.Link>
             </Nav>
