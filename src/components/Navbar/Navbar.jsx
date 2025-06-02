@@ -10,7 +10,7 @@ const MyNav = () => {
   return (
     <Navbar expand="lg" className={styles.topNav}>
       <Container fluid>
-        <Navbar.Brand as={Link} to="/" style={{ marginLeft: '15px' }}>
+        <Navbar.Brand as={Link} to="/" style={{ marginLeft: '8px' }}>
           <img className={styles.logonav} src="/ros-41.png" alt="Logo" />
         </Navbar.Brand>
 
@@ -36,7 +36,7 @@ const MyNav = () => {
               <Dropdown as={Nav.Item}>
                 <Dropdown.Toggle
                   as={Nav.Link}
-                  className="fs-1 mb-4 d-flex justify-content-between align-items-center w-100"
+                  className={` ${styles.mobileOnlyLargeText} ${styles.desktopCenter} d-flex align-items-center`}
                 >
                   ACADEMY
                 </Dropdown.Toggle>
@@ -45,7 +45,7 @@ const MyNav = () => {
               <Dropdown as={Nav.Item}>
                 <Dropdown.Toggle
                   as={Nav.Link}
-                  className="fs-1 mb-4 d-flex justify-content-between align-items-center w-100"
+                  className={`mb-4 w-100 ${styles.mobileOnlyLargeText} ${styles.desktopCenter} d-flex align-items-center`}
                 >
                   PRODUCTIONS
                 </Dropdown.Toggle>
@@ -63,7 +63,7 @@ const MyNav = () => {
               <Dropdown as={Nav.Item}>
                 <Dropdown.Toggle
                   as={Nav.Link}
-                  className="fs-1 mb-4 d-flex justify-content-between align-items-center w-100"
+                  className={`mb-4 w-100 ${styles.mobileOnlyLargeText} ${styles.desktopCenter} d-flex align-items-center`}
                 >
                   PARTNERSHIPS
                 </Dropdown.Toggle>
@@ -71,7 +71,7 @@ const MyNav = () => {
 
               <Nav.Link
                 href="#masterclass"
-                className="fs-1 mb-4 d-flex justify-content-start w-100"
+                className={`mb-4 w-100 ${styles.mobileOnlyLargeText} ${styles.desktopCenter} d-flex align-items-center`}
               >
                 MASTERCLASS
               </Nav.Link>
