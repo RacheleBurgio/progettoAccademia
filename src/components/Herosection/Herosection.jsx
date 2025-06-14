@@ -54,8 +54,8 @@ function HeroSection() {
             className="d-flex flex-column justify-content-center align-items-center text-white text-center p-3"
           >
             <img
-              // src="/logo.png"
-              alt="logo"
+              src="/logo.png"
+              alt="logo accademia"
               className={`${styles.logo} img-fluid`}
             />
             <div className={`${styles.titles} social-icons`}>
