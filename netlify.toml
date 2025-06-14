@@ -1,7 +1,0 @@
-[build]
-  command = "npm run build"
-  publish = "build/"
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Prerender-Token = "ud0uerYUHh29KxOq27XB"
