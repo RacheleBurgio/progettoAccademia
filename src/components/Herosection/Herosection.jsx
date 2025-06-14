@@ -1,7 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import styles from './Herosection.module.css'
 import Presentazione from '../Presentazione/Presentazione'
-import News from '../News/News'
 import FloatingWhatsAppButton from '../FloatingWhatsappButton/FloatingWhatsappButton'
 import { Helmet } from 'react-helmet-async'
 
@@ -30,7 +29,7 @@ function HeroSection() {
             className="d-flex flex-column justify-content-center align-items-center text-white text-center p-3"
           >
             <img
-              src="/logo.svg"
+              src="/logo.png"
               alt="logo"
               className={`${styles.logo} img-fluid`}
             />

@@ -1,6 +1,5 @@
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Row, Col, Card } from 'react-bootstrap'
 import { Helmet } from 'react-helmet-async'
-import styles from './ArtistiInPortafoglio.module.css'
 
 const ArtistiInPortafolgio = () => {
   const artisti = [
