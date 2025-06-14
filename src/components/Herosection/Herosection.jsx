@@ -17,7 +17,32 @@ function HeroSection() {
           name="keywords"
           content="Scuola di canto Palermo, Lezioni di canto Palermo, Accademia di Musica Moderna, Corso di canto professionale, corso di strumento a Palermo, Label"
         />
+        <meta property="og:title" content="Con noi è tutta un'altra musica" />
+        <meta
+          property="og:description"
+          content="Eventi, corsi e passione musicale per tutti."
+        />
+        <meta
+          property="og:image"
+          content="https://connoietuttaunaltramusica.it/img/logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://connoietuttaunaltramusica.it"
+        />
+        <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Con noi è tutta un'altra musica",
+            "url": "https://connoietuttaunaltramusica.it",
+            "logo": "https://connoietuttaunaltramusica.it/img/logo.png"
+          }
+          `}
+        </script>
       </Helmet>
 
       <Container fluid className={styles.contenitore}>
