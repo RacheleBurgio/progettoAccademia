@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Helmet } from 'react-helmet-async'
 import styles from './ArtistiInPortafoglio.module.css'
 
 const ArtistiInPortafolgio = () => {
@@ -88,8 +89,6 @@ const ArtistiInPortafolgio = () => {
       date: '16-06-2020',
     },
   ]
-
-  // Ordina per data crescente
   const artistiOrdinati = artisti.sort((a, b) => {
     const parseDate = (str) => {
       const [day, month, year] = str.split('-')
@@ -101,6 +100,21 @@ const ArtistiInPortafolgio = () => {
 
   return (
     <div className="p-4">
+      <Helmet>
+        <title>
+          Artisti in Portafoglio | Accademia Con Noi è Tutta Un'Altra Musica
+        </title>
+        <meta
+          name="description"
+          content="scopri i nostri artisti che hanno partecipato alla nostra accademia con etichetta discografica"
+        />
+        <meta
+          name="keywords"
+          content="Accademia di canto moderno a Palermo, etichetta discogrsafica, studio discografico palermo, artisti accademia palermo, artisti palermo, cantanti palermitani"
+        />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
       <Row className="gx-4 gy-4">
         {artistiOrdinati.map((card, idx) => (
           <Col xs={12} md={4} lg={4} key={idx}>
