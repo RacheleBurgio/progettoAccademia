@@ -8,7 +8,7 @@ function HeroSection() {
   return (
     <>
       <Helmet>
-        <title>Con Noi è tutta un'altra Musica</title>
+        <title>Con Noi è Tutta Un'Altra Musica</title>
         <meta
           name="description"
           content="Scopri la nostra Accademia di Canto e Musica Moderna a Palermo! Offriamo lezioni di canto, strumento e composizioni professionali per tutte le età e livelli. La scuola si trova a Palermo"
